@@ -1,10 +1,9 @@
 ### Hi there 👋, my name is Arturs
-#### I am GitHub Readme Generator's creator
-![I am GitHub Readme Generator's creator]
+#### I am student of ZSTI in Gliwice.
 
-I made this project just for fun, it allows you to create nice and simple GitHub Readme files that you can copy/paste and use in your profile.
+I made this project just for fun, and there are some things I made by myself/
 
-Skills: VUE JS / REACT / JS / HTML / CSS
+Skills: HTML / CSS / C++ / PYTHON / REACTJS
 
 - 🔭 I’m currently working on portfolio 
 - 🌱 I’m currently learning ReactJS 
