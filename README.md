@@ -1,4 +1,4 @@
-### Hi there 👋, my name is Arturs
+### Hi there 👋, my name is Kacper
 #### I am student of ZSTI in Gliwice.
 
 I made this project just for fun, and there are some things I made by myself/
