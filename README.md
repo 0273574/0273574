@@ -3,7 +3,7 @@
 
 I made this project just for fun, and there are some things I made by myself/
 
-Skills: HTML / CSS / C++ / PYTHON / REACTJS
+Skills: HTML / CSS / C++ / PYTHON / PHP
 
 - 🔭 I’m currently working on portfolio 
 - 🌱 I’m currently learning ReactJS 
