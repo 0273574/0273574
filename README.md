@@ -3,10 +3,8 @@
 
 I made this project just for fun, and there are some things I made by myself/
 
-Skills: HTML / CSS / C++ / PYTHON / PHP
+Skills: HTML / CSS / C++ / PYTHON / PHP / JAVASCRIPT / WORDPRESS
 
-- 🔭 I’m currently working on portfolio 
-- 🌱 I’m currently learning ReactJS 
 - 📫 How to reach me: rusin.kacper.2006@gmail.com 
 
 
