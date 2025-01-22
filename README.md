@@ -26,7 +26,7 @@ I'm constantly challenging myself with new security puzzles and expanding my kno
 
 ## Get in Touch 📫
 - Email: rusin.kacper.2006@gmail.com
-- Portfolio: [kacperrusin.pl](https://kacperrusin.pl)
+- Portfolio: [kacperrusin.pl](https://rusinkacper.pl)
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/0273574)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://kacperrusin.pl)
 
