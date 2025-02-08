@@ -3,19 +3,6 @@
 ## About Me
 I'm a passionate cybersecurity enthusiast and student at ZSTI in Gliwice, Poland. I love diving into the fascinating world of security, solving CTF challenges, and exploring different aspects of information security.
 
-## What I Do 🛡️
-- Explore various aspects of cybersecurity
-- Work on personal security projects
-- Continuously learn about new security threats and defenses
-
-## Technical Skills 🚀
-- Web Security
-- Network Security
-- Programming: Python, C++, PHP
-- Web Technologies: HTML, CSS, JavaScript
-- System Administration
-- CTF Problem-Solving
-
 ## Get in Touch 📫
 - Email: rusin.kacper.2006@gmail.com
 - Portfolio: [kacperrusin.pl](https://rusinkacper.pl)
