@@ -1,12 +1,7 @@
 # Hi there! 👋 I'm Kacper
 
-## About Me
-I'm a passionate cybersecurity enthusiast and student at ZSTI in Gliwice, Poland. I love diving into the fascinating world of security, solving CTF challenges, and exploring different aspects of information security.
-
-## Get in Touch 📫
-- Email: rusin.kacper.2006@gmail.com
-- Portfolio: [kacperrusin.pl](https://rusinkacper.pl)
-
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/0273574)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://kacperrusin.pl)
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=0273574)](https://github.com/0273574/github-readme-stats)
+[![Stats](https://github-readme-stats.vercel.app/api?username=0273574&count_private=true&show_icons=true&disable_animations=true&theme=dark)](https://rusinkacper.pl)
+<br>
+[![Streak](https://github-readme-streak-stats.herokuapp.com/?user=0273574&theme=dark)](https://rusinkacper.pl)
+<br>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0273574&layout=compact&theme=dark&count_private=true)](https://rusinkacper.pl)
