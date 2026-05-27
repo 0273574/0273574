@@ -1,0 +1,23 @@
+<svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0d1117; }
+    .border { fill: none; stroke: #30363d; stroke-width: 1; rx: 6; }
+    .title { fill: #58a6ff; font-size: 14px; font-weight: 600; font-family: monospace; }
+    .label { fill: #8b949e; font-size: 12px; font-family: monospace; }
+    .value { fill: #e6edf3; font-size: 12px; font-weight: 600; font-family: monospace; }
+    .icon { fill: #58a6ff; }
+  </style>
+  <rect class="bg" width="495" height="195" rx="6"/>
+  <rect class="border" width="494" height="194" x="0.5" y="0.5" rx="6"/>
+  <text x="25" y="35" class="title">📊 0273574's GitHub Stats</text>
+  <text x="25" y="70" class="label">⭐ Total Stars</text>
+  <text x="300" y="70" class="value">1</text>
+  <text x="25" y="95" class="label">📦 Commits (this year)</text>
+  <text x="300" y="95" class="value">30</text>
+  <text x="25" y="120" class="label">🔀 Pull Requests</text>
+  <text x="300" y="120" class="value">0</text>
+  <text x="25" y="145" class="label">🐛 Issues</text>
+  <text x="300" y="145" class="value">0</text>
+  <text x="25" y="170" class="label">👥 Followers</text>
+  <text x="300" y="170" class="value">3</text>
+</svg>
