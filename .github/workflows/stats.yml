@@ -26,7 +26,7 @@ jobs:
 
       - name: Generate stats SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
           USERNAME: "0273574"
         run: python generate_stats.py
 
