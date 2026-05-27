@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate stats images
-        uses: rahul-jha98/github-stats-transparent@latest
+        uses: rahul-jha98/github-stats-transparent@main
         with:
           username: "0273574"
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
