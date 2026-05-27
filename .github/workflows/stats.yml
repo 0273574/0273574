@@ -16,25 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats images
-        uses: rahul-jha98/github-stats-transparent@main
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          username: "0273574"
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXCLUDED: ""
-          EXCLUDED_REPOS: ""
-          COUNT_STATS_FROM_FORKS: false
+          python-version: "3.11"
 
-      - name: Move files
-        run: |
-          mkdir -p generated
-          mv generated/overview.svg generated/overview.svg 2>/dev/null || true
-          mv generated/languages.svg generated/languages.svg 2>/dev/null || true
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Commit files
+      - name: Generate stats SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: "0273574"
+        run: python generate_stats.py
+
+      - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          mkdir -p generated
           git add generated/
           git diff --staged --quiet || git commit -m "Update stats"
           git push
