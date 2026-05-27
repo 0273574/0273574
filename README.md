@@ -11,4 +11,4 @@ Mainly focused on:
 
 ## 📊 GitHub Stats
 
-![Metrics](https://raw.githubusercontent.com/0273574/0273574/main/generated/metrics.svg)
+![Stats](https://raw.githubusercontent.com/0273574/0273574/main/generated/overview.svg)
