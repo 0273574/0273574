@@ -8,16 +8,16 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate Stats
-        uses: jstrieb/github-stats@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: 0273574
+          template: classic
+          base: header, activity, community, repositories
+          output_action: commit
+          filename: generated/metrics.svg
