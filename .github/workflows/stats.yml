@@ -8,16 +8,33 @@ on:
     branches: [main]
 
 jobs:
-  github-metrics:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: actions/checkout@v4
+
+      - name: Generate stats images
+        uses: rahul-jha98/github-stats-transparent@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: 0273574
-          template: classic
-          base: header, activity, community, repositories
-          output_action: commit
-          filename: generated/metrics.svg
+          username: "0273574"
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXCLUDED: ""
+          EXCLUDED_REPOS: ""
+          COUNT_STATS_FROM_FORKS: false
+
+      - name: Move files
+        run: |
+          mkdir -p generated
+          mv generated/overview.svg generated/overview.svg 2>/dev/null || true
+          mv generated/languages.svg generated/languages.svg 2>/dev/null || true
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add generated/
+          git diff --staged --quiet || git commit -m "Update stats"
+          git push
