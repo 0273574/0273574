@@ -1,5 +1,15 @@
-# Hi there! 👋 I'm Kacper
+# Hi there, I'm Kacper 👋
 
-[![Stats](https://github-readme-stats.vercel.app/api?username=0273574&count_private=true&show_icons=true&disable_animations=true&theme=dark)](https://rusinkacper.pl)
-<br>
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0273574&layout=compact&theme=dark&count_private=true)](https://rusinkacper.pl)
+## 🔐 CTF Player & Security Researcher
+
+Mainly focused on:
+- 🌐 **Web** exploitation
+- 🔍 **Reverse Engineering**
+- 🖼️ **Steganography**
+
+---
+
+## 📊 GitHub Stats
+
+![Stats](https://raw.githubusercontent.com/0273574/0273574/main/generated/overview.svg)
+![Languages](https://raw.githubusercontent.com/0273574/0273574/main/generated/languages.svg)
