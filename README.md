@@ -9,6 +9,4 @@ Mainly focused on:
 
 ---
 
-## 📊 GitHub Stats
-
 ![Stats](https://raw.githubusercontent.com/0273574/0273574/40c5aa45c536d4aa20c3935321e66cb69e9135eb/generated/overview.svg)
