@@ -67,3 +67,4 @@ with open("generated/overview.svg", "w") as f:
     f.write(svg)
 
 print(f"Done! Stars: {stars}, Commits: {commits}, PRs: {prs}, Issues: {issues}, Followers: {followers}")
+print(f"Raw contributions data: {data['contributionsCollection']}")
