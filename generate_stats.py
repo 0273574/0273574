@@ -2,7 +2,7 @@ import requests, os, json
 
 TOKEN = os.environ.get("GITHUB_TOKEN")
 USERNAME = os.environ.get("USERNAME")
-
+#test
 # Walidacja zmiennych środowiskowych
 if not TOKEN:
     print("ERROR: GITHUB_TOKEN nie jest ustawiony!")
