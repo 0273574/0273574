@@ -2,7 +2,7 @@ import requests, os
 
 TOKEN = os.environ["GITHUB_TOKEN"]
 USERNAME = os.environ["USERNAME"]
-HEADERS = {"Authorization": f"bearer {TOKEN}", "Content-Type": "application/json"}
+HEADERS = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
 
 query = """
 query($login: String!) {
@@ -28,7 +28,13 @@ r = requests.post(
     json={"query": query, "variables": {"login": USERNAME}},
     headers=HEADERS,
 )
-data = r.json()["data"]["user"]
+
+response = r.json()
+if "errors" in response:
+    print(f"GraphQL Error: {response['errors']}")
+    exit(1)
+
+data = response["data"]["user"]
 
 stars = sum(n["stargazers"]["totalCount"] for n in data["repositories"]["nodes"])
 commits = (
@@ -40,26 +46,34 @@ issues = data["contributionsCollection"]["totalIssueContributions"]
 repos = data["contributionsCollection"]["totalRepositoryContributions"]
 followers = data["followers"]["totalCount"]
 
+# Formatowanie liczb z tys. notacją (np. 1.2K zamiast 1200)
+def format_number(n):
+    if n >= 1000:
+        return f"{n/1000:.1f}K"
+    return str(n)
+
+user_name = data["name"] or USERNAME  # Użyj pełnej nazwy lub fallback na username
+
 svg = f"""<svg width="495" height="195" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg {{ fill: #0d1117; }}
     .title {{ fill: #58a6ff; font-size: 14px; font-weight: 600; font-family: monospace; }}
     .label {{ fill: #8b949e; font-size: 12px; font-family: monospace; }}
-    .value {{ fill: #e6edf3; font-size: 12px; font-weight: 600; font-family: monospace; }}
+    .value {{ fill: #e6edf3; font-size: 12px; font-weight: 600; font-family: monospace; text-anchor: end; }}
   </style>
   <rect class="bg" width="495" height="195" rx="6"/>
   <rect fill="none" stroke="#30363d" stroke-width="1" width="494" height="194" x="0.5" y="0.5" rx="6"/>
-  <text x="25" y="35" class="title">📊 {USERNAME}'s GitHub Stats</text>
+  <text x="25" y="35" class="title">📊 {user_name}'s GitHub Stats</text>
   <text x="25" y="70" class="label">⭐ Total Stars</text>
-  <text x="300" y="70" class="value">{stars}</text>
+  <text x="470" y="70" class="value">{format_number(stars)}</text>
   <text x="25" y="95" class="label">📦 Commits (this year)</text>
-  <text x="300" y="95" class="value">{commits}</text>
+  <text x="470" y="95" class="value">{format_number(commits)}</text>
   <text x="25" y="120" class="label">🔀 Pull Requests</text>
-  <text x="300" y="120" class="value">{prs}</text>
+  <text x="470" y="120" class="value">{format_number(prs)}</text>
   <text x="25" y="145" class="label">🐛 Issues</text>
-  <text x="300" y="145" class="value">{issues}</text>
+  <text x="470" y="145" class="value">{format_number(issues)}</text>
   <text x="25" y="170" class="label">👥 Followers</text>
-  <text x="300" y="170" class="value">{followers}</text>
+  <text x="470" y="170" class="value">{format_number(followers)}</text>
 </svg>"""
 
 os.makedirs("generated", exist_ok=True)
