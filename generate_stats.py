@@ -1,7 +1,16 @@
-import requests, os
+import requests, os, json
 
-TOKEN = os.environ["GITHUB_TOKEN"]
-USERNAME = os.environ["USERNAME"]
+TOKEN = os.environ.get("GITHUB_TOKEN")
+USERNAME = os.environ.get("USERNAME")
+
+# Walidacja zmiennych środowiskowych
+if not TOKEN:
+    print("ERROR: GITHUB_TOKEN nie jest ustawiony!")
+    exit(1)
+if not USERNAME:
+    print("ERROR: USERNAME nie jest ustawiony!")
+    exit(1)
+
 HEADERS = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
 
 query = """
@@ -23,15 +32,30 @@ query($login: String!) {
 }
 """
 
+print(f"Sending GraphQL query for user: {USERNAME}")
 r = requests.post(
     "https://api.github.com/graphql",
     json={"query": query, "variables": {"login": USERNAME}},
     headers=HEADERS,
 )
 
+print(f"Response status code: {r.status_code}")
 response = r.json()
+
+# Wydrukuj całą odpowiedź dla debugowania
+print(f"API Response: {json.dumps(response, indent=2)}")
+
+# Sprawdzenie błędów
 if "errors" in response:
-    print(f"GraphQL Error: {response['errors']}")
+    print(f"GraphQL Errors: {response['errors']}")
+    exit(1)
+
+if "data" not in response:
+    print(f"ERROR: Brak klucza 'data' w odpowiedzi!")
+    exit(1)
+
+if response["data"] is None or response["data"].get("user") is None:
+    print(f"ERROR: User not found or API returned null!")
     exit(1)
 
 data = response["data"]["user"]
@@ -80,5 +104,5 @@ os.makedirs("generated", exist_ok=True)
 with open("generated/overview.svg", "w") as f:
     f.write(svg)
 
-print(f"Done! Stars: {stars}, Commits: {commits}, PRs: {prs}, Issues: {issues}, Followers: {followers}")
-print(f"Raw contributions data: {data['contributionsCollection']}")
+print(f"✅ Done! Stars: {stars}, Commits: {commits}, PRs: {prs}, Issues: {issues}, Followers: {followers}")
+print(f"SVG saved to: generated/overview.svg")
