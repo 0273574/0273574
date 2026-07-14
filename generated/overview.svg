@@ -13,9 +13,9 @@
   <text x="25" y="95" class="label">📦 Commits (this year)</text>
   <text x="470" y="95" class="value">292</text>
   <text x="25" y="120" class="label">🔀 Pull Requests</text>
-  <text x="470" y="120" class="value">2</text>
+  <text x="470" y="120" class="value">4</text>
   <text x="25" y="145" class="label">🐛 Issues</text>
-  <text x="470" y="145" class="value">7</text>
+  <text x="470" y="145" class="value">8</text>
   <text x="25" y="170" class="label">👥 Followers</text>
   <text x="470" y="170" class="value">3</text>
 </svg>
