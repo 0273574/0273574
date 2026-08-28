@@ -9,7 +9,7 @@
   <rect fill="none" stroke="#30363d" stroke-width="1" width="494" height="194" x="0.5" y="0.5" rx="6"/>
   <text x="25" y="35" class="title">📊 Kacper Rusin's GitHub Stats</text>
   <text x="25" y="70" class="label">⭐ Total Stars</text>
-  <text x="470" y="70" class="value">5</text>
+  <text x="470" y="70" class="value">6</text>
   <text x="25" y="95" class="label">📦 Commits (this year)</text>
   <text x="470" y="95" class="value">318</text>
   <text x="25" y="120" class="label">🔀 Pull Requests</text>
