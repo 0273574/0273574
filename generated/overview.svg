@@ -11,11 +11,11 @@
   <text x="25" y="70" class="label">⭐ Total Stars</text>
   <text x="470" y="70" class="value">6</text>
   <text x="25" y="95" class="label">📦 Commits (this year)</text>
-  <text x="470" y="95" class="value">334</text>
+  <text x="470" y="95" class="value">335</text>
   <text x="25" y="120" class="label">🔀 Pull Requests</text>
   <text x="470" y="120" class="value">20</text>
   <text x="25" y="145" class="label">🐛 Issues</text>
   <text x="470" y="145" class="value">12</text>
   <text x="25" y="170" class="label">👥 Followers</text>
-  <text x="470" y="170" class="value">4</text>
+  <text x="470" y="170" class="value">5</text>
 </svg>
